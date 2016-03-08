@@ -12,11 +12,10 @@
 @interface Artist : NSObject
 
 + (id)artistWithName:(NSString *)name;
-
 - (id)initWithName:(NSString *)name;
 
-- (NSString *)name;
-- (void)setName:(NSString *)name;
+@property (nonatomic, assign) NSUInteger artistID;
+@property (nonatomic, copy) NSString *name;
 
 - (void)orderAlbum:(Album *)album quantity:(NSUInteger)quantity;
 

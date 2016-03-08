@@ -13,13 +13,14 @@
 int main(int argc, const char * argv[]) {
 
     Artist *artist = [Artist artistWithName:@"The Beatles"];
+    artist.artistID = 1;
     
-    NSLog(@"Artist %@", artist.name);
+    NSLog(@"Artist %lu - %@", artist.artistID, artist.name);
     
     Album *rubberSoul = [[Album alloc] init];
-    [rubberSoul setName:@"Rubber Soul"];
+    rubberSoul.name = @"Rubber Soul";
     Album *whiteAlbum = [[Album alloc] init];
-    [whiteAlbum setName:@"White Album"];
+    whiteAlbum.name = @"White Album";
     
     [artist orderAlbum:rubberSoul quantity:1];
     [artist orderAlbum:whiteAlbum quantity:2];

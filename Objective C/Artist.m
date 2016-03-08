@@ -8,9 +8,10 @@
 
 #import "Artist.h"
 
-@implementation Artist {
-    NSString *_name;
-}
+@implementation Artist
+
+@synthesize artistID = _artistID;
+@synthesize name = _name;
 
 + (id)artistWithName:(NSString *)name {
     return [[Artist alloc] initWithName:name];
@@ -32,14 +33,6 @@
     }
     
     return self;
-}
-
-- (NSString *)name {
-    return _name;
-}
-
-- (void)setName:(NSString *)name {
-    _name = name;
 }
 
 - (void)orderAlbum:(Album *)album quantity:(NSUInteger)quantity {
