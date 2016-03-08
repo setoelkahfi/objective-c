@@ -12,8 +12,7 @@
 
 int main(int argc, const char * argv[]) {
 
-    Artist *artist = [[Artist alloc] init];
-    [artist setName:@"The Beatles"];
+    Artist *artist = [Artist artistWithName:@"The Beatles"];
     
     NSLog(@"Artist %@", artist.name);
     

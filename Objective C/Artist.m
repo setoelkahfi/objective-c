@@ -12,6 +12,28 @@
     NSString *_name;
 }
 
++ (id)artistWithName:(NSString *)name {
+    return [[Artist alloc] initWithName:name];
+}
+
+- (id)init {
+    self = [super init];
+    if (self) {
+        // Custom initialization code
+    }
+    
+    return self;
+}
+
+- (id)initWithName:(NSString *)name {
+    self = [super init];
+    if (self) {
+        _name = [name copy];
+    }
+    
+    return self;
+}
+
 - (NSString *)name {
     return _name;
 }

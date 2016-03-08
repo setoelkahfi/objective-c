@@ -11,6 +11,10 @@
 
 @interface Artist : NSObject
 
++ (id)artistWithName:(NSString *)name;
+
+- (id)initWithName:(NSString *)name;
+
 - (NSString *)name;
 - (void)setName:(NSString *)name;
 
