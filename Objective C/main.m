@@ -13,11 +13,24 @@ int main(int argc, const char * argv[]) {
     // Object literals
     logh(@"Object Literals", ^{
         
-        NSString *firstName = @"Paul";
+        NSString *firstName = [[NSString alloc] initWithString:@"Paul"];
         NSString *lastName = @"McCartney";
         
         logs(firstName);
         logs(lastName);
+        
+    });
+    
+    // Format strings
+    logh(@"Format Strings", ^{
+       
+        NSString *firstName = @"John";
+        NSString *lastName = @"Lennon";
+        
+        NSString *fullName = [NSString stringWithFormat:@"%@ %@", firstName, lastName];
+        
+        
+        logs(fullName);
         
     });
     
