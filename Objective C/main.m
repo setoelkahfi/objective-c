@@ -34,4 +34,18 @@ int main(int argc, const char * argv[]) {
         
     });
     
+    // Concatenating Strings
+    logh(@"Concatenating Strings", ^{
+    
+        NSString *aaa = @"AAA";
+        NSString *bbb = @"BBB";
+        NSString *ccc = @"CCC";
+        
+        // Append string
+        logs(aaa);
+        logs([aaa stringByAppendingString:bbb]);
+        logs([[aaa stringByAppendingString:bbb] stringByAppendingString:ccc]);
+        
+    });
+    
 }
