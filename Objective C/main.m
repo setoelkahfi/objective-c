@@ -48,4 +48,18 @@ int main(int argc, const char * argv[]) {
         
     });
     
+    // Sub Strings
+    logh(@"Substrings", ^{
+    
+        NSString *usa = @"United States of America";
+        
+        logs([usa substringToIndex:6]);
+        
+        NSRange range = [usa rangeOfString:@"States"];
+        logs([usa substringWithRange:range]);
+        
+        logs([usa substringFromIndex:17]);
+        
+    });
+    
 }
