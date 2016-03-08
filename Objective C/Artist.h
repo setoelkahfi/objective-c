@@ -11,6 +11,9 @@
 
 @interface Artist : NSObject
 
+- (NSString *)name;
+- (void)setName:(NSString *)name;
+
 - (void)orderAlbum:(Album *)album quantity:(NSUInteger)quantity;
 
 @end

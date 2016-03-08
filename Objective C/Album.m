@@ -8,18 +8,26 @@
 
 #import "Album.h"
 
-@implementation Album
+@implementation Album {
+    NSString *_name;
+}
 
-- (void)markAsFavourite {
-    
+- (void)markAsFavorite {
+    NSLog(@"Marked %@ as favorite", _name);
 }
 
 - (NSString *)name {
-    return nil;
+    return _name;
 }
 
 - (void)setName:(NSString *)name {
-    
+    if (_name != name) {
+        _name = [name copy];
+    }
+}
+
+- (NSString *)description {
+    return _name;
 }
 
 @end

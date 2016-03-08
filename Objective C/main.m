@@ -7,11 +7,22 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Artist.h"
+#import "Album.h"
 
 int main(int argc, const char * argv[]) {
-    @autoreleasepool {
-        // insert code here...
-        NSLog(@"Hello, World!");
-    }
-    return 0;
+
+    Artist *artist = [[Artist alloc] init];
+    [artist setName:@"The Beatles"];
+    
+    NSLog(@"Artist %@", artist.name);
+    
+    Album *rubberSoul = [[Album alloc] init];
+    [rubberSoul setName:@"Rubber Soul"];
+    Album *whiteAlbum = [[Album alloc] init];
+    [whiteAlbum setName:@"White Album"];
+    
+    [artist orderAlbum:rubberSoul quantity:1];
+    [artist orderAlbum:whiteAlbum quantity:2];
+    
 }

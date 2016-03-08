@@ -8,10 +8,21 @@
 
 #import "Artist.h"
 
-@implementation Artist
+@implementation Artist {
+    NSString *_name;
+}
+
+- (NSString *)name {
+    return _name;
+}
+
+- (void)setName:(NSString *)name {
+    _name = name;
+}
 
 - (void)orderAlbum:(Album *)album quantity:(NSUInteger)quantity {
-    
+    NSString *str = quantity == 1 ? @"copy" : @"copies";
+    NSLog(@"Ordered %lu %@ of '%@'", quantity, str, album.name);
 }
 
 @end
