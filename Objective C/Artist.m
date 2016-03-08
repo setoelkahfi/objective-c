@@ -10,4 +10,8 @@
 
 @implementation Artist
 
+- (void)orderAlbum:(Album *)album quantity:(NSUInteger)quantity {
+    
+}
+
 @end

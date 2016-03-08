@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Album.h"
 
 @interface Artist : NSObject
+
+- (void)orderAlbum:(Album *)album quantity:(NSUInteger)quantity;
 
 @end

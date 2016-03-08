@@ -10,4 +10,8 @@
 
 @interface Album : NSObject
 
+- (void)markAsFavourite;
+- (NSString *)name;
+- (void)setName:(NSString *)name;
+
 @end

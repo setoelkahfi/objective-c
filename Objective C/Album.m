@@ -10,4 +10,16 @@
 
 @implementation Album
 
+- (void)markAsFavourite {
+    
+}
+
+- (NSString *)name {
+    return nil;
+}
+
+- (void)setName:(NSString *)name {
+    
+}
+
 @end
