@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "NSString+Additions.h"
 
 int main(int argc, const char * argv[]) {
 
@@ -81,6 +82,14 @@ int main(int argc, const char * argv[]) {
         NSString *result = [theBeatles isEqualToString:ledZeppelin] ?   @"Yes" : @"No";
         
         logs([NSString stringWithFormat:@"Are '%@' and '%@' equal? %@?", theBeatles, ledZeppelin, result]);
+        
+    });
+    
+    // Using category string
+    logh(@"Trimmed String", ^{
+    
+        NSString *value = @"    somevalue    ";
+        logs([value trimmedString]);
         
     });
     

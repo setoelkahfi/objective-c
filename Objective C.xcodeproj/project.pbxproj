@@ -10,6 +10,7 @@
 		BD63F4521C8EC85C00561D56 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BD63F4511C8EC85C00561D56 /* main.m */; };
 		BD63F45A1C8EC96C00561D56 /* Artist.m in Sources */ = {isa = PBXBuildFile; fileRef = BD63F4591C8EC96C00561D56 /* Artist.m */; };
 		BD63F45D1C8ECAC800561D56 /* Album.m in Sources */ = {isa = PBXBuildFile; fileRef = BD63F45C1C8ECAC800561D56 /* Album.m */; };
+		BD63F4661C8F03EE00561D56 /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = BD63F4651C8F03EE00561D56 /* NSString+Additions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -32,6 +33,8 @@
 		BD63F45B1C8ECAC800561D56 /* Album.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Album.h; sourceTree = "<group>"; };
 		BD63F45C1C8ECAC800561D56 /* Album.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Album.m; sourceTree = "<group>"; };
 		BD63F4631C8EE53300561D56 /* Strings.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Strings.pch; sourceTree = "<group>"; };
+		BD63F4641C8F03EE00561D56 /* NSString+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Additions.h"; sourceTree = "<group>"; };
+		BD63F4651C8F03EE00561D56 /* NSString+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Additions.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +67,8 @@
 		BD63F4501C8EC85C00561D56 /* Objective C */ = {
 			isa = PBXGroup;
 			children = (
+				BD63F4641C8F03EE00561D56 /* NSString+Additions.h */,
+				BD63F4651C8F03EE00561D56 /* NSString+Additions.m */,
 				BD63F4611C8EE4BF00561D56 /* Supporting Files */,
 				BD63F4511C8EC85C00561D56 /* main.m */,
 				BD63F4581C8EC96C00561D56 /* Artist.h */,
@@ -139,6 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD63F45D1C8ECAC800561D56 /* Album.m in Sources */,
+				BD63F4661C8F03EE00561D56 /* NSString+Additions.m in Sources */,
 				BD63F45A1C8EC96C00561D56 /* Artist.m in Sources */,
 				BD63F4521C8EC85C00561D56 /* main.m in Sources */,
 			);
