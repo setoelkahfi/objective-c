@@ -13,7 +13,7 @@ int main(int argc, const char * argv[]) {
     // Object literals
     logh(@"Object Literals", ^{
         
-        NSString *firstName = [[NSString alloc] initWithString:@"Paul"];
+        NSString *firstName = @"Paul";
         NSString *lastName = @"McCartney";
         
         logs(firstName);
@@ -59,6 +59,28 @@ int main(int argc, const char * argv[]) {
         logs([usa substringWithRange:range]);
         
         logs([usa substringFromIndex:17]);
+        
+    });
+    
+    // Changing Case
+    logh(@"Changing Case", ^{
+    
+        NSString *message = @"iOS Development Rocks!";
+        
+        logs([message lowercaseString]);
+        logs([message uppercaseString]);
+        
+    });
+    
+    // Test Equality
+    logh(@"Testing Equality", ^{
+    
+        NSString *theBeatles = @"The Beatles";
+        NSString *ledZeppelin = @"Led Zeppelin";
+        
+        NSString *result = [theBeatles isEqualToString:ledZeppelin] ?   @"Yes" : @"No";
+        
+        logs([NSString stringWithFormat:@"Are '%@' and '%@' equal? %@?", theBeatles, ledZeppelin, result]);
         
     });
     
