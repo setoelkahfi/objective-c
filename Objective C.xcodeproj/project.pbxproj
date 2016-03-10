@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		BD63F4521C8EC85C00561D56 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BD63F4511C8EC85C00561D56 /* main.m */; };
-		BD63F45A1C8EC96C00561D56 /* Artist.m in Sources */ = {isa = PBXBuildFile; fileRef = BD63F4591C8EC96C00561D56 /* Artist.m */; };
-		BD63F45D1C8ECAC800561D56 /* Album.m in Sources */ = {isa = PBXBuildFile; fileRef = BD63F45C1C8ECAC800561D56 /* Album.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,10 +25,6 @@
 /* Begin PBXFileReference section */
 		BD63F44E1C8EC85C00561D56 /* Objective C */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Objective C"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD63F4511C8EC85C00561D56 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		BD63F4581C8EC96C00561D56 /* Artist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Artist.h; sourceTree = "<group>"; };
-		BD63F4591C8EC96C00561D56 /* Artist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Artist.m; sourceTree = "<group>"; };
-		BD63F45B1C8ECAC800561D56 /* Album.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Album.h; sourceTree = "<group>"; };
-		BD63F45C1C8ECAC800561D56 /* Album.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Album.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,10 +58,6 @@
 			isa = PBXGroup;
 			children = (
 				BD63F4511C8EC85C00561D56 /* main.m */,
-				BD63F4581C8EC96C00561D56 /* Artist.h */,
-				BD63F4591C8EC96C00561D56 /* Artist.m */,
-				BD63F45B1C8ECAC800561D56 /* Album.h */,
-				BD63F45C1C8ECAC800561D56 /* Album.m */,
 			);
 			path = "Objective C";
 			sourceTree = "<group>";
@@ -128,8 +118,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD63F45D1C8ECAC800561D56 /* Album.m in Sources */,
-				BD63F45A1C8EC96C00561D56 /* Artist.m in Sources */,
 				BD63F4521C8EC85C00561D56 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

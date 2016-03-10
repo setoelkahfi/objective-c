@@ -12,17 +12,41 @@
 
 int main(int argc, const char * argv[]) {
 
-    Artist *artist = [Artist artistWithName:@"The Beatles"];
-    artist.artistID = 1;
+    NSArray *beatles = [NSArray arrayWithObjects:@"John", @"Paul", @"George", @"Ringo", nil];
+    NSLog(@"%@", beatles);
     
-    NSLog(@"Artist %lu - %@", artist.artistID, artist.name);
+    NSString *john = [beatles objectAtIndex:0];
+    NSString *paul = [beatles objectAtIndex:1];
     
-    Album *rubberSoul = [[Album alloc] init];
-    rubberSoul.name = @"Rubber Soul";
-    Album *whiteAlbum = [[Album alloc] init];
-    whiteAlbum.name = @"White Album";
+    NSLog(@"%@", john);
+    NSLog(@"%@", paul);
     
-    [artist orderAlbum:rubberSoul quantity:1];
-    [artist orderAlbum:whiteAlbum quantity:2];
+    for (int i = 0; i < [beatles count]; i++) {
+        NSLog(@"Name: %@", [beatles objectAtIndex:i]);
+    }
+    
+    for (NSString *name in beatles) {
+        NSLog(@"Name: %@", name);
+    }
+    
+    NSString *result = [beatles containsObject:@"Ringo"] ? @"YES" : @"NO";
+    NSLog(@"Contains string 'Ringo'? %@", result);
+    
+    NSUInteger index = [beatles indexOfObject:@"George"];
+    NSLog(@"George's index is: %lu", index);
+    
+    NSMutableArray *mutableBeatles = [NSMutableArray arrayWithArray:beatles];
+    [mutableBeatles addObject:@"Brian Epstein"];
+    [mutableBeatles addObject:@"George Martin"];
+    [mutableBeatles addObject:@"Stuart Sutcliffe"];
+    
+    [mutableBeatles removeLastObject];
+    
+    NSUInteger brianIndex = [mutableBeatles indexOfObject:@"Brian Epstein"];
+    [mutableBeatles replaceObjectAtIndex:brianIndex withObject:@"Apple Corps"];
+    
+    for (id name in mutableBeatles) {
+        NSLog(@"Name: %@", name);
+    }
     
 }
