@@ -39,7 +39,7 @@ int main(int argc, const char * argv[]) {
     }
     
     NSString *engineer = [mutableBeatles objectForKey:@"engineer"];
-    if (engineer == nil) {
+    if (engineer == nil || [engineer isKindOfClass:[NSNull class]]) {
         NSLog(@"Engineer was nil");
     } else {
         NSLog(@"Engineer was not nil");
