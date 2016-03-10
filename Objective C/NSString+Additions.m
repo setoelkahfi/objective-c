@@ -15,4 +15,18 @@
     return [self stringByTrimmingCharactersInSet:whiteSpace];
 }
 
+- (BOOL)containsString:(NSString *)str {
+    NSRange range = [self rangeOfString:str];
+    BOOL contains = (range.location == NSNotFound);
+    return contains;
+}
+
+- (BOOL)isEqualToString:(NSString *)str ignoringCase:(BOOL)ignoreCase {
+    if (!ignoreCase) {
+        return [self localizedCaseInsensitiveCompare:str] == NSOrderedSame;
+    } else {
+        return [self isEqualToString:str];
+    }
+}
+
 @end

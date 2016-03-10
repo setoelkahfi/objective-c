@@ -11,5 +11,7 @@
 @interface NSString (Additions)
 
 - (NSString *)trimmedString;
+- (BOOL)containsString:(NSString *)str;
+- (BOOL)isEqualToString:(NSString *)str ignoringCase:(BOOL)ignoreCase;
 
 @end

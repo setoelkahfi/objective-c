@@ -10,87 +10,21 @@
 #import "NSString+Additions.h"
 
 int main(int argc, const char * argv[]) {
-
-    // Object literals
-    logh(@"Object Literals", ^{
-        
-        NSString *firstName = @"Paul";
-        NSString *lastName = @"McCartney";
-        
-        logs(firstName);
-        logs(lastName);
+    
+    logh(@"Contains Strings", ^{
+    
+        NSString *sgtPepper = @"Sgt. Pepper's Lonely Hearts Club Band";
+        NSString *containsResult = [sgtPepper containsString:@"Hearts"] ? @"YES" : @"NO";
+        NSLog(@"Coantains string? %@", containsResult);
         
     });
     
-    // Format strings
-    logh(@"Format Strings", ^{
-       
-        NSString *firstName = @"John";
-        NSString *lastName = @"Lennon";
+    logh(@"Case Insensitive Equality", ^{
         
-        NSString *fullName = [NSString stringWithFormat:@"%@ %@", firstName, lastName];
-        
-        
-        logs(fullName);
-        
-    });
+        NSString *rubberSoul = @"Rubber Soul";
+        BOOL equalsResult = [rubberSoul isEqualToString:@"RUBBer Soul" ignoringCase:YES];
+        NSLog(@"Are strings equal? %@", equalsResult ? @"YES" : @"NO");
     
-    // Concatenating Strings
-    logh(@"Concatenating Strings", ^{
-    
-        NSString *aaa = @"AAA";
-        NSString *bbb = @"BBB";
-        NSString *ccc = @"CCC";
-        
-        // Append string
-        logs(aaa);
-        logs([aaa stringByAppendingString:bbb]);
-        logs([[aaa stringByAppendingString:bbb] stringByAppendingString:ccc]);
-        
-    });
-    
-    // Sub Strings
-    logh(@"Substrings", ^{
-    
-        NSString *usa = @"United States of America";
-        
-        logs([usa substringToIndex:6]);
-        
-        NSRange range = [usa rangeOfString:@"States"];
-        logs([usa substringWithRange:range]);
-        
-        logs([usa substringFromIndex:17]);
-        
-    });
-    
-    // Changing Case
-    logh(@"Changing Case", ^{
-    
-        NSString *message = @"iOS Development Rocks!";
-        
-        logs([message lowercaseString]);
-        logs([message uppercaseString]);
-        
-    });
-    
-    // Test Equality
-    logh(@"Testing Equality", ^{
-    
-        NSString *theBeatles = @"The Beatles";
-        NSString *ledZeppelin = @"Led Zeppelin";
-        
-        NSString *result = [theBeatles isEqualToString:ledZeppelin] ?   @"Yes" : @"No";
-        
-        logs([NSString stringWithFormat:@"Are '%@' and '%@' equal? %@?", theBeatles, ledZeppelin, result]);
-        
-    });
-    
-    // Using category string
-    logh(@"Trimmed String", ^{
-    
-        NSString *value = @"    somevalue    ";
-        logs([value trimmedString]);
-        
     });
     
 }
