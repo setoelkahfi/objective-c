@@ -30,7 +30,7 @@ int main(int argc, const char * argv[]) {
     [mutableBeatles setObject:@"Brian Epstein" forKey:@"manager"];
     [mutableBeatles setObject:@"George Martin" forKey:@"producer"];
     
-//    [mutableBeatles removeObjectForKey:<#(nonnull id)#>]
+    [mutableBeatles removeObjectForKey:@"manager"];
     
     for (id key in mutableBeatles) {
         NSLog(@"Key: %@, Value: %@", key, [mutableBeatles objectForKey:key]);
