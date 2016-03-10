@@ -7,46 +7,32 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Artist.h"
-#import "Album.h"
 
 int main(int argc, const char * argv[]) {
 
-    NSArray *beatles = [NSArray arrayWithObjects:@"John", @"Paul", @"George", @"Ringo", nil];
-    NSLog(@"%@", beatles);
+    NSArray *keys = [NSArray arrayWithObjects:@"rhythm", @"bass", @"lead", @"drums", nil];
+    NSArray *names = [NSArray arrayWithObjects:@"John", @"Paul", @"George", @"Ringo", nil];
+    NSDictionary *beatles = [NSDictionary dictionaryWithObjects:names forKeys:keys];
     
-    NSString *john = [beatles objectAtIndex:0];
-    NSString *paul = [beatles objectAtIndex:1];
+    NSString *drumer = [beatles objectForKey:@"drums"];
+    NSString *leadGuitarist = [beatles objectForKey:@"lead"];
     
-    NSLog(@"%@", john);
-    NSLog(@"%@", paul);
+    NSLog(@"Drums: %@", drumer);
+    NSLog(@"Lead Guitarist: %@", leadGuitarist);
     
-    for (int i = 0; i < [beatles count]; i++) {
-        NSLog(@"Name: %@", [beatles objectAtIndex:i]);
+    for (id key in beatles) {
+        NSLog(@"Key: %@, Value: %@", key, [beatles objectForKey:key]);
     }
     
-    for (NSString *name in beatles) {
-        NSLog(@"Name: %@", name);
+    printf("\n");
+    
+    NSMutableDictionary *mutableBeatles = [NSMutableDictionary dictionaryWithDictionary:beatles];
+    [mutableBeatles setObject:@"Brian Epstein" forKey:@"manager"];
+    [mutableBeatles setObject:@"George Martin" forKey:@"producer"];
+    
+//    [mutableBeatles removeObjectForKey:<#(nonnull id)#>]
+    
+    for (id key in mutableBeatles) {
+        NSLog(@"Key: %@, Value: %@", key, [mutableBeatles objectForKey:key]);
     }
-    
-    NSString *result = [beatles containsObject:@"Ringo"] ? @"YES" : @"NO";
-    NSLog(@"Contains string 'Ringo'? %@", result);
-    
-    NSUInteger index = [beatles indexOfObject:@"George"];
-    NSLog(@"George's index is: %lu", index);
-    
-    NSMutableArray *mutableBeatles = [NSMutableArray arrayWithArray:beatles];
-    [mutableBeatles addObject:@"Brian Epstein"];
-    [mutableBeatles addObject:@"George Martin"];
-    [mutableBeatles addObject:@"Stuart Sutcliffe"];
-    
-    [mutableBeatles removeLastObject];
-    
-    NSUInteger brianIndex = [mutableBeatles indexOfObject:@"Brian Epstein"];
-    [mutableBeatles replaceObjectAtIndex:brianIndex withObject:@"Apple Corps"];
-    
-    for (id name in mutableBeatles) {
-        NSLog(@"Name: %@", name);
-    }
-    
 }
