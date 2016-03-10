@@ -32,6 +32,8 @@ int main(int argc, const char * argv[]) {
     
     [mutableBeatles removeObjectForKey:@"manager"];
     
+    [mutableBeatles setObject:nil forKey:@"engineer"];
+    
     for (id key in mutableBeatles) {
         NSLog(@"Key: %@, Value: %@", key, [mutableBeatles objectForKey:key]);
     }
