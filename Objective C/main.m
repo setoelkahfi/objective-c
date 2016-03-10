@@ -37,4 +37,11 @@ int main(int argc, const char * argv[]) {
     for (id key in mutableBeatles) {
         NSLog(@"Key: %@, Value: %@", key, [mutableBeatles objectForKey:key]);
     }
+    
+    NSString *engineer = [mutableBeatles objectForKey:@"engineer"];
+    if (engineer == nil) {
+        NSLog(@"Engineer was nil");
+    } else {
+        NSLog(@"Engineer was not nil");
+    }
 }
